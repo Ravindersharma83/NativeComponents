@@ -16,6 +16,8 @@ const FlatListDemo = () => {
       <Text style={{fontSize:24,textAlign:'center',margin:10}}>FlatList Example</Text>
       <View style={{marginTop:50}}>
       <FlatList
+        horizontal
+        showsHorizontalScrollIndicator={false}
         data={products}
         keyExtractor={(item)=>item.id}
         renderItem={({item,index})=>{
@@ -43,13 +45,22 @@ const styles = StyleSheet.create({
     container:{
         flex:1,
     },
+    // itemView:{
+    //     width:'90%',
+    //     height:100,
+    //     backgroundColor:'#fff',
+    //     alignSelf:'center',
+    //     marginTop:10,
+    //     flexDirection:'row'
+    // },
     itemView:{
-        width:'90%',
-        height:100,
+        width:200,
+        height:230,
         backgroundColor:'#fff',
-        alignSelf:'center',
-        marginTop:10,
-        flexDirection:'row'
+        marginLeft:10,
+        elevation:5,
+        borderRadius:10,
+        marginBottom:10
     },
     productImage:{
         width:100,
