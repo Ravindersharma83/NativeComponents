@@ -1,13 +1,15 @@
 import { Image, StyleSheet, Switch, Text, View, PermissionsAndroid } from 'react-native'
 import React, { useEffect, useState } from 'react'
 import CustomSwitch from './CustomSwitch';
+import Contacts from 'react-native-contacts';
+
 
 const SwitchComponent = () => {
     const[camera,setCamera] = useState(false);
     const[contact,setContact] = useState(false);
 
     useEffect(()=>{
-        
+
     },[])
 
     const toggleCamera = ()=>{
@@ -62,7 +64,18 @@ const SwitchComponent = () => {
               buttonNegative: 'Cancel',
               buttonPositive: 'OK',
             },
-          );
+          ).then((res)=>{
+            console.log('Permission',res);
+            Contacts.getAll()
+            .then((contacts)=>{
+                console.log('contacts--',contacts);
+            })
+            .catch((error)=>{
+                console.log('err--',error);
+            })
+          }).catch((error)=>{
+            console.log('Permission Error',error);
+          });
           if (granted === PermissionsAndroid.RESULTS.GRANTED) {
             console.log('You can use the contact');
             setContact(true);
