@@ -6,6 +6,7 @@ import MultiViewFlatList from './src/Components/MultiViewFlatList'
 import RefreshingFlatlist from './src/Components/RefreshingFlatlist'
 import FlatListLoadMore from './src/Components/FlatListLoadMore'
 import AlertComponent from './src/Components/AlertComponent'
+import DismissKeyboard from './src/Components/DismissKeyboard'
 
 const App = () => {
   return (
@@ -14,7 +15,8 @@ const App = () => {
       // <MultiViewFlatList/>
       // <RefreshingFlatlist/>
       // <FlatListLoadMore/>
-      <AlertComponent/>
+      // <AlertComponent/>
+      <DismissKeyboard/>
   )
 }
 
