@@ -4,13 +4,15 @@ import FlatListDemo from './src/Components/FlatListDemo'
 import NestedFlatList from './src/Components/NestedFlatList'
 import MultiViewFlatList from './src/Components/MultiViewFlatList'
 import RefreshingFlatlist from './src/Components/RefreshingFlatlist'
+import FlatListLoadMore from './src/Components/FlatListLoadMore'
 
 const App = () => {
   return (
       // <FlatListDemo/>
       // <NestedFlatList/>
       // <MultiViewFlatList/>
-      <RefreshingFlatlist/>
+      // <RefreshingFlatlist/>
+      <FlatListLoadMore/>
   )
 }
 
