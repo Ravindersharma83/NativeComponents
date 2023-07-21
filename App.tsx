@@ -8,6 +8,7 @@ import FlatListLoadMore from './src/Components/FlatListLoadMore'
 import AlertComponent from './src/Components/AlertComponent'
 import DismissKeyboard from './src/Components/DismissKeyboard'
 import SwitchComponent from './src/Components/SwitchComponent'
+import SectionListDemo from './src/Components/SectionListDemo'
 
 const App = () => {
   return (
@@ -18,7 +19,8 @@ const App = () => {
       // <FlatListLoadMore/>
       // <AlertComponent/>
       // <DismissKeyboard/>
-      <SwitchComponent/>
+      // <SwitchComponent/>
+      <SectionListDemo/>
   )
 }
 
