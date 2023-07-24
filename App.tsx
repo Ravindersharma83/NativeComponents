@@ -14,6 +14,7 @@ import ApperanceComponent from './src/Components/ApperanceComponent'
 import DetectPlatform from './src/Components/DetectPlatform'
 import AnimationComponent from './src/Components/AnimationComponent'
 import DrawerLayoutComponent from './src/Components/DrawerLayoutComponent'
+import TransformComponent from './src/Components/TransformComponent'
 
 const App = () => {
   return (
@@ -30,7 +31,8 @@ const App = () => {
       // <ApperanceComponent/>
       // <DetectPlatform/>
       // <AnimationComponent/>
-      <DrawerLayoutComponent/>
+      // <DrawerLayoutComponent/>
+      <TransformComponent/>
   )
 }
 
