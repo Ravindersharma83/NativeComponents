@@ -18,6 +18,7 @@ import TransformComponent from './src/Components/TransformComponent'
 import BackHandlerAndroidComp from './src/Components/BackHandlerAndroidComp'
 import PromptAlert from './src/Components/PromptAlert'
 import VibrationAlert from './src/Components/VibrationAlert'
+import SliderComponent from './src/Components/SliderComponent'
 
 const App = () => {
   return (
@@ -38,7 +39,8 @@ const App = () => {
       // <TransformComponent/>
       // <BackHandlerAndroidComp/>
       // <PromptAlert/>
-      <VibrationAlert/>
+      // <VibrationAlert/>
+      <SliderComponent/>
   )
 }
 
