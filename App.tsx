@@ -13,6 +13,7 @@ import ToastAndroidComponent from './src/Components/ToastAndroidComponent'
 import ApperanceComponent from './src/Components/ApperanceComponent'
 import DetectPlatform from './src/Components/DetectPlatform'
 import AnimationComponent from './src/Components/AnimationComponent'
+import DrawerLayoutComponent from './src/Components/DrawerLayoutComponent'
 
 const App = () => {
   return (
@@ -28,7 +29,8 @@ const App = () => {
       // <ToastAndroidComponent/>
       // <ApperanceComponent/>
       // <DetectPlatform/>
-      <AnimationComponent/>
+      // <AnimationComponent/>
+      <DrawerLayoutComponent/>
   )
 }
 
