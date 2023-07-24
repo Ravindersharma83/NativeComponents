@@ -16,6 +16,7 @@ import AnimationComponent from './src/Components/AnimationComponent'
 import DrawerLayoutComponent from './src/Components/DrawerLayoutComponent'
 import TransformComponent from './src/Components/TransformComponent'
 import BackHandlerAndroidComp from './src/Components/BackHandlerAndroidComp'
+import PromptAlert from './src/Components/PromptAlert'
 
 const App = () => {
   return (
@@ -34,7 +35,8 @@ const App = () => {
       // <AnimationComponent/>
       // <DrawerLayoutComponent/>
       // <TransformComponent/>
-      <BackHandlerAndroidComp/>
+      // <BackHandlerAndroidComp/>
+      <PromptAlert/>
   )
 }
 
