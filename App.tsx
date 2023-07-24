@@ -12,6 +12,7 @@ import SectionListDemo from './src/Components/SectionListDemo'
 import ToastAndroidComponent from './src/Components/ToastAndroidComponent'
 import ApperanceComponent from './src/Components/ApperanceComponent'
 import DetectPlatform from './src/Components/DetectPlatform'
+import AnimationComponent from './src/Components/AnimationComponent'
 
 const App = () => {
   return (
@@ -26,7 +27,8 @@ const App = () => {
       // <SectionListDemo/>
       // <ToastAndroidComponent/>
       // <ApperanceComponent/>
-      <DetectPlatform/>
+      // <DetectPlatform/>
+      <AnimationComponent/>
   )
 }
 
