@@ -17,6 +17,7 @@ import DrawerLayoutComponent from './src/Components/DrawerLayoutComponent'
 import TransformComponent from './src/Components/TransformComponent'
 import BackHandlerAndroidComp from './src/Components/BackHandlerAndroidComp'
 import PromptAlert from './src/Components/PromptAlert'
+import VibrationAlert from './src/Components/VibrationAlert'
 
 const App = () => {
   return (
@@ -36,7 +37,8 @@ const App = () => {
       // <DrawerLayoutComponent/>
       // <TransformComponent/>
       // <BackHandlerAndroidComp/>
-      <PromptAlert/>
+      // <PromptAlert/>
+      <VibrationAlert/>
   )
 }
 
