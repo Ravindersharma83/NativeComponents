@@ -11,6 +11,7 @@ import SwitchComponent from './src/Components/SwitchComponent'
 import SectionListDemo from './src/Components/SectionListDemo'
 import ToastAndroidComponent from './src/Components/ToastAndroidComponent'
 import ApperanceComponent from './src/Components/ApperanceComponent'
+import DetectPlatform from './src/Components/DetectPlatform'
 
 const App = () => {
   return (
@@ -24,7 +25,8 @@ const App = () => {
       // <SwitchComponent/>
       // <SectionListDemo/>
       // <ToastAndroidComponent/>
-      <ApperanceComponent/>
+      // <ApperanceComponent/>
+      <DetectPlatform/>
   )
 }
 
