@@ -5,18 +5,22 @@ const SectionListDemo = () => {
     const DATA = [
         {
             title:"Main Items",
+            admin:'Ravinder',
             data:["Pizza","Burger"],
         },
         {
             title:"Sides",
+            admin:'Ravinder',
             data:["French Fries","Paneer Tika"],
         },
         {
             title:"Drinks",
+            admin:'Ravinder',
             data:["Coca-Cola","Sprite","Water"],
         },
         {
             title:"Desserts",
+            admin:'Nik',
             data:["Gulab-Jamun","Ice-Cream"],
         },
     ]
@@ -31,8 +35,11 @@ const SectionListDemo = () => {
           <Text style={styles.title}>{item}</Text>
         </View>
       )}
-      renderSectionHeader={({section: {title}}) => (
+      renderSectionHeader={({section: {title,admin}}) => (
+        <>
+        <Text style={styles.header}>Owner - {admin}</Text>
         <Text style={styles.header}>{title}</Text>
+        </>
       )}
     />
     </View>

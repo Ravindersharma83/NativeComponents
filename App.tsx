@@ -9,6 +9,7 @@ import AlertComponent from './src/Components/AlertComponent'
 import DismissKeyboard from './src/Components/DismissKeyboard'
 import SwitchComponent from './src/Components/SwitchComponent'
 import SectionListDemo from './src/Components/SectionListDemo'
+import ToastAndroidComponent from './src/Components/ToastAndroidComponent'
 
 const App = () => {
   return (
@@ -20,7 +21,8 @@ const App = () => {
       // <AlertComponent/>
       // <DismissKeyboard/>
       // <SwitchComponent/>
-      <SectionListDemo/>
+      // <SectionListDemo/>
+      <ToastAndroidComponent/>
   )
 }
 
