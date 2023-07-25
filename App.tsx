@@ -20,6 +20,7 @@ import PromptAlert from './src/Components/PromptAlert'
 import VibrationAlert from './src/Components/VibrationAlert'
 import SliderComponent from './src/Components/SliderComponent'
 import AvatarElem from './src/Components/ReactNativeElements/AvatarElem'
+import BadgeElem from './src/Components/ReactNativeElements/BadgeElem'
 
 const App = () => {
   return (
@@ -42,7 +43,8 @@ const App = () => {
       // <PromptAlert/>
       // <VibrationAlert/>
       // <SliderComponent/>
-      <AvatarElem/>
+      // <AvatarElem/>
+      <BadgeElem/>
   )
 }
 
