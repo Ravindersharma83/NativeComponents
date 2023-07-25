@@ -19,6 +19,7 @@ import BackHandlerAndroidComp from './src/Components/BackHandlerAndroidComp'
 import PromptAlert from './src/Components/PromptAlert'
 import VibrationAlert from './src/Components/VibrationAlert'
 import SliderComponent from './src/Components/SliderComponent'
+import AvatarElem from './src/Components/ReactNativeElements/AvatarElem'
 
 const App = () => {
   return (
@@ -40,7 +41,8 @@ const App = () => {
       // <BackHandlerAndroidComp/>
       // <PromptAlert/>
       // <VibrationAlert/>
-      <SliderComponent/>
+      // <SliderComponent/>
+      <AvatarElem/>
   )
 }
 
