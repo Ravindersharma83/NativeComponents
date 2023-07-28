@@ -31,7 +31,7 @@ const App = () => {
       // <FlatListLoadMore/>
       // <AlertComponent/>
       // <DismissKeyboard/>
-      // <SwitchComponent/>
+      <SwitchComponent/>
       // <SectionListDemo/>
       // <ToastAndroidComponent/>
       // <ApperanceComponent/>
@@ -44,7 +44,7 @@ const App = () => {
       // <VibrationAlert/>
       // <SliderComponent/>
       // <AvatarElem/>
-      <BadgeElem/>
+      // <BadgeElem/>
   )
 }
 
