@@ -21,6 +21,7 @@ import VibrationAlert from './src/Components/VibrationAlert'
 import SliderComponent from './src/Components/SliderComponent'
 import AvatarElem from './src/Components/ReactNativeElements/AvatarElem'
 import BadgeElem from './src/Components/ReactNativeElements/BadgeElem'
+import GeoLocationNative from './src/Components/ReactNativeElements/GeoLocationNative'
 
 const App = () => {
   return (
@@ -31,7 +32,7 @@ const App = () => {
       // <FlatListLoadMore/>
       // <AlertComponent/>
       // <DismissKeyboard/>
-      <SwitchComponent/>
+      // <SwitchComponent/>
       // <SectionListDemo/>
       // <ToastAndroidComponent/>
       // <ApperanceComponent/>
@@ -45,6 +46,7 @@ const App = () => {
       // <SliderComponent/>
       // <AvatarElem/>
       // <BadgeElem/>
+      <GeoLocationNative/>
   )
 }
 
