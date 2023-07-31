@@ -7,17 +7,18 @@ import Torch from 'react-native-torch';
 
 const SwitchComponent = () => {
     const[camera,setCamera] = useState(false);
+    const[gallery,setGallery] = useState(false);
     const[contact,setContact] = useState(false);
 
-    const[enabled,setEnabled] = useState(false);
-    const [isTorchOn, setIsTorchOn] = useState(false);
+    // const[enabled,setEnabled] = useState(false);
+    // const [isTorchOn, setIsTorchOn] = useState(false);
 
-    const toggleSwitch = ()=>{
-        setEnabled(previousState=>!previousState)
-        Torch.switchState(!isTorchOn);
-        setIsTorchOn(!isTorchOn);
-        console.log(enabled);
-    }
+    // const toggleSwitch = ()=>{
+    //     setEnabled(previousState=>!previousState)
+    //     Torch.switchState(!isTorchOn);
+    //     setIsTorchOn(!isTorchOn);
+    //     console.log(enabled);
+    // }
 
     useEffect(()=>{
 
@@ -29,6 +30,13 @@ const SwitchComponent = () => {
             requestCameraPermission();
         }
     }
+
+    const toggleGallery = ()=>{
+      setGallery(previousState=>!previousState)
+      if(!gallery){
+          requestGalleryPermission();
+      }
+  }
     const toggleContact = ()=>{
         setContact(previousState=>!previousState)
         if(!contact){
@@ -56,6 +64,32 @@ const SwitchComponent = () => {
           } else {
             console.log('Camera permission denied');
             setCamera(false);
+          }
+        } catch (err) {
+          console.warn(err);
+        }
+      };
+
+      const requestGalleryPermission = async () => {
+        try {
+          const granted = await PermissionsAndroid.request(
+            PermissionsAndroid.PERMISSIONS.READ_MEDIA_IMAGES,
+            {
+              title: 'Cool Photo App Images Permission',
+              message:
+                'Cool Photo App needs access to your camera ' +
+                'so you can take awesome pictures.',
+              buttonNeutral: 'Ask Me Later',
+              buttonNegative: 'Cancel',
+              buttonPositive: 'OK',
+            },
+          );
+          if (granted === PermissionsAndroid.RESULTS.GRANTED) {
+            console.log('You can use the media images');
+            setGallery(true);
+          } else {
+            console.log('Media Images permission denied');
+            setGallery(false);
           }
         } catch (err) {
           console.warn(err);
@@ -100,8 +134,9 @@ const SwitchComponent = () => {
       };
       
   return (
-    <View style={[styles.conatiner,{backgroundColor:enabled ? 'gray' : 'white'}]}>
-        {enabled ? <Image source={require('../images/bulbOn.png')} style={{height:100,width:100}}/>
+    // <View style={[styles.conatiner,{backgroundColor:enabled ? 'gray' : 'white'}]}>
+      <View style={styles.conatiner}>
+        {/* {enabled ? <Image source={require('../images/bulbOn.png')} style={{height:100,width:100}}/>
         : <Image source={require('../images/bulbOff.png')} style={{height:100,width:100}}/>
         }
         <Switch
@@ -110,12 +145,18 @@ const SwitchComponent = () => {
         onValueChange={toggleSwitch}
         value={enabled}
         style={{ transform: [{ scaleX: 1.3 }, { scaleY: 1.3 }] , marginTop:40 }}
-      />
+      /> */}
 
-      {/* <View style={{borderBottomWidth:1,marginBottom:20}}>
+      <View style={{borderBottomWidth:1,marginBottom:20}}>
         <View style={{flexDirection:'row',margin:20}}>
             <Text style={{marginLeft:-10,color:camera ? 'green' : 'red'}}>Camera permisson is {camera ? 'Enabled' : 'Disabled'}</Text>
             <CustomSwitch enabled={camera} toggleSwitch={toggleCamera}/>
+        </View>
+      </View>
+      <View style={{borderBottomWidth:1,marginBottom:20}}>
+        <View style={{flexDirection:'row',margin:20}}>
+            <Text style={{marginLeft:-10,color:gallery ? 'green' : 'red'}}>Gallery permisson is {gallery ? 'Enabled' : 'Disabled'}</Text>
+            <CustomSwitch enabled={gallery} toggleSwitch={toggleGallery}/>
         </View>
       </View>
       <View>
@@ -123,7 +164,7 @@ const SwitchComponent = () => {
         <Text style={{marginLeft:-10,color:contact ? 'green' : 'red'}}>Contact permisson is {contact ? 'Enabled' : 'Disabled'}</Text>
         <CustomSwitch enabled={contact} toggleSwitch={toggleContact}/>
       </View>
-      </View> */}
+      </View>
     </View>
   )
 }
