@@ -55,12 +55,12 @@ const GeoLocationNative = () => {
   return (
     <View style={styles.container}>
     <Text>Welcome!</Text>
-    <Text>Latitude: {location ? location.coords.latitude : null}</Text>
-    <Text>Longitude: {location ? location.coords.longitude : null}</Text>
     <View
       style={{marginTop: 10, padding: 10, borderRadius: 10, width: '40%'}}>
       <Button title="Get Location" onPress={getLocation} />
     </View>
+    <Text>Latitude: {location ? location.coords.latitude : null}</Text>
+    <Text>Longitude: {location ? location.coords.longitude : null}</Text>
   </View>
   )
 }

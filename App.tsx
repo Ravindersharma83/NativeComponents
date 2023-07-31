@@ -22,6 +22,7 @@ import SliderComponent from './src/Components/SliderComponent'
 import AvatarElem from './src/Components/ReactNativeElements/AvatarElem'
 import BadgeElem from './src/Components/ReactNativeElements/BadgeElem'
 import GeoLocationNative from './src/Components/ReactNativeElements/GeoLocationNative'
+import ViewMap from './src/Components/ReactNativeElements/NativeViewMap'
 
 const App = () => {
   return (
@@ -46,7 +47,8 @@ const App = () => {
       // <SliderComponent/>
       // <AvatarElem/>
       // <BadgeElem/>
-      <GeoLocationNative/>
+      // <GeoLocationNative/>
+      <ViewMap/>
   )
 }
 
