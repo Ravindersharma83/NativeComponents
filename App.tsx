@@ -1,5 +1,9 @@
 import { StyleSheet, Text, View } from 'react-native'
 import React from 'react'
+
+import { NavigationContainer } from '@react-navigation/native';
+import { createNativeStackNavigator } from '@react-navigation/native-stack';
+
 import FlatListDemo from './src/Components/FlatListDemo'
 import NestedFlatList from './src/Components/NestedFlatList'
 import MultiViewFlatList from './src/Components/MultiViewFlatList'
@@ -23,10 +27,19 @@ import AvatarElem from './src/Components/ReactNativeElements/AvatarElem'
 import BadgeElem from './src/Components/ReactNativeElements/BadgeElem'
 import GeoLocationNative from './src/Components/ReactNativeElements/GeoLocationNative'
 import ViewMap from './src/Components/ReactNativeElements/NativeViewMap'
+import Products from './src/Components/ReduxTutorial/ReduxExample/Products'
+import { Provider } from 'react-redux'
+import { store } from './src/redux/store'
+import Cart from './src/Components/ReduxTutorial/ReduxExample/Cart';
+
+
+const Stack = createNativeStackNavigator();
 
 const App = () => {
   return (
-      // <FlatListDemo/>
+    <Provider store={store}>
+      <NavigationContainer>
+      {/* // <FlatListDemo/>
       // <NestedFlatList/>
       // <MultiViewFlatList/>
       // <RefreshingFlatlist/>
@@ -48,7 +61,13 @@ const App = () => {
       // <AvatarElem/>
       // <BadgeElem/>
       // <GeoLocationNative/>
-      <ViewMap/>
+      // <ViewMap/> */}
+      <Stack.Navigator initialRouteName='Home'>
+        <Stack.Screen options={{headerShown:false}} name="Home" component={Products} />
+        <Stack.Screen name="Cart" component={Cart} />
+      </Stack.Navigator>
+      </NavigationContainer>
+      </Provider>
   )
 }
 
